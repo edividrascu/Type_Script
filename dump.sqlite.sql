@@ -1,5 +1,4 @@
--- TABLE
-
+-- Ejercicio 1
 CREATE TABLE Libros (
     book_id INT PRIMARY KEY,
     titulo VARCHAR(255),
@@ -11,10 +10,9 @@ CREATE TABLE Libros (
     calificacion FLOAT,
     stock_count INT
 );
- 
--- INDEX
- 
--- TRIGGER
- 
--- VIEW
- 
+
+-- Ejercicio 2
+ALTER TABLE Libros
+ADD COLUMN editor VARCHAR(100),
+ADD COLUMN num_paginas INT;
+
