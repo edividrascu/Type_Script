@@ -63,3 +63,7 @@ REVOKE DELETE ON Books FROM 'martin'@'localhost';
 
 -- Revocar el permiso de actualización
 REVOKE UPDATE ON Books FROM 'martin'@'localhost';
+
+-- ejercicio 7 remove a book with BookID = 101
+DELETE FROM Books
+WHERE book_id = 101;
