@@ -74,3 +74,31 @@ DELETE FROM Libros
 WHERE book_id = 103;
 ROLLBACK;
 
+-- Ejercicio 9 final Examples of Basic SQL queries
+
+-- mmujer sobreviviente de >30 años
+SELECT *
+FROM tested
+WHERE Sex = 'female' AND Survived = 1 AND Age > 30;
+
+-- la edad media de los hombres que no sobrevivieron 
+SELECT AVG(Age)
+FROM tested
+WHERE Sex = 'male' AND Survived = 0;
+
+-- Mostrar información para pasajeros que gastaron entre $20 y $50 en sus boletos y abordaron en el puerto 'C'.
+SELECT *
+-- FROM passengers Hmm
+FROM tested 
+WHERE Fare BETWEEN 20 AND 50 AND Embarked = 'C';
+
+-- Calcula el número total de supervivientes de la primera clase.
+SELECT COUNT(*) AS TotalSurvivors
+FROM tested
+WHERE Pclass = 1 AND Survived = 1;
+
+
+-- Muestra la información de los pasajeros que embarcaron desde Cherburgo (puerto 'C') y gastaron más de $75 en sus boletos.
+SELECT *
+FROM tested
+WHERE Embarked = 'C' AND Fare > 75;
