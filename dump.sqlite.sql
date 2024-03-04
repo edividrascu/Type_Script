@@ -19,6 +19,8 @@ ADD COLUMN num_paginas INT;
 
 
 -- Ejercicio 3
+ALTER TABLE Books
+MODIFY COLUMN book_id INT AUTO_INCREMENT;
 
 -- "Un viaje al centro" de Julio Verne
 INSERT INTO Libros (titulo, autor, genero, ano_publicado, isbn, precio, calificacion, stock_count, editor, num_paginas)
