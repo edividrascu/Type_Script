@@ -65,14 +65,16 @@ REVOKE DELETE ON Books FROM 'martin'@'localhost';
 REVOKE UPDATE ON Books FROM 'martin'@'localhost';
 
 -- ejercicio 7 remove a book with BookID = 101
+START TRANSACTION;
 DELETE FROM Books
-WHERE book_id = 101;
+WHERE BookID = 101;
 
 -- ejercicio 8 rollback You're testing the database by removing a book with BookID = 103 but want to revert the change immediately after.
 BEGIN TRANSACTION;
 DELETE FROM Libros
 WHERE book_id = 103;
 ROLLBACK;
+
 
 -- Ejercicio 9 final Examples of Basic SQL queries
 
