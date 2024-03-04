@@ -58,3 +58,8 @@ GRANT SELECT, UPDATE ON Books TO 'martin'@'localhost';
 
 -- Revocar el permiso de eliminación
 REVOKE DELETE ON Books FROM 'martin'@'localhost';
+
+-- ejercicio 6 Martin ya la cago 
+
+-- Revocar el permiso de actualización
+REVOKE UPDATE ON Books FROM 'martin'@'localhost';
