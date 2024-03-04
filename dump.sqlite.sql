@@ -43,3 +43,18 @@ UPDATE Books
 SET price = 12.99, stock_count = stock_count - 1
 WHERE title = 'War and Peace';
 
+-- ejercicio 4.2 delete
+-- DELETE FROM Books
+-- WHERE title = 'La Odisea Galáctica'
+-- el WHERE importante xd 
+
+
+-- ejercicio 5 Añadimos a un asistente 
+-- Crear el usuario Martin
+CREATE USER 'martin'@'localhost' IDENTIFIED BY 'tu_contraseña';
+
+-- Conceder permisos para ver y actualizar la tabla Books
+GRANT SELECT, UPDATE ON Books TO 'martin'@'localhost';
+
+-- Revocar el permiso de eliminación
+REVOKE DELETE ON Books FROM 'martin'@'localhost';
